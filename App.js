@@ -2,12 +2,12 @@
 
 import React from "react";
 import { View, Text, Button } from "react-native";
-import { createStackNavigator, createAppContainer } from "react-navigation";
-import route from './config/router';
+import {  createAppContainer } from "react-navigation";
+import router from './config/router';
 
-const AppNavigator = createStackNavigator(route);
 
-const AppContainer = createAppContainer(AppNavigator);
+
+const AppContainer = createAppContainer(router);
 
 export default class App extends React.Component {
   render() {
