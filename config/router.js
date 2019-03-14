@@ -1,15 +1,11 @@
-import {createStackNavigator} from "react-navigation";
 
-import HomeScreen from '../screens/HomeScreen';
-import CountryPickerScreen from '../screens/CountryPickerScreen';
-import CityPickerScreen from '../screens/CityPickerScreen'
+import Home from '../screens/Home';
+import CountryPicker from '../screens/CountryPicker';
+import CityPicker from '../screens/CityPicker'
 
-export default router = createStackNavigator({
-    Home: HomeScreen,
-    CountryPicker: CountryPickerScreen,
-    CityPicker: CityPickerScreen
-  },
-  {
-    initialRouteName: "Home"
+export default {
+    Home: Home,
+    CountryPicker: CountryPicker,
+    CityPicker: CityPicker
   }
 );
