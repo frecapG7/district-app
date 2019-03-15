@@ -1,7 +1,13 @@
 
-export SET_USER = 'SET_USER';
-export GET_USER = 'GET_USER';
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
 
-export const setUser = user =>(){
-  return {SET_USER , user}
+export const login = user =>({
+  type: LOGIN ,
+  user
+})
+
+
+export const logout = () => ({
+  return
 })

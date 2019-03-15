@@ -1,9 +1,20 @@
-import {SET_USER} from '../actions/user';
+import {LOGIN, LOGOUT} from '../actions/user';
 
-const user = (state = {}, action) => {
+const user = (state = {
+  user: {},
+  loggedIn: false
+}, action) => {
   switch (action.type) {
-    case SET_USER :
-      return action.user
+    case LOGIN :
+      return {
+        user: action.user,
+        loggedIn: true
+      }
+    case LOGOUT:
+      return {
+        user : {},
+        loggedIn: false
+      }
     default:
       return state
   }
