@@ -4,6 +4,7 @@ import React from "react";
 import { View, Text, Button } from "react-native";
 import {  createStackNavigator, createAppContainer } from "react-navigation";
 import router from './config/router';
+import store from './redux/config/store';
 
 
 const AppNavigator = createStackNavigator(
@@ -15,6 +16,10 @@ const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends React.Component {
   render() {
-    return <AppContainer />;
+    return (
+      <Provider store={store}>
+        <AppContainer />
+      </Provider>
+    );
   }
 }
